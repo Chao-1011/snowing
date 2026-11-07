@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>where</title>
+  <link rel="stylesheet" href="./minimal.css">
+  <script src="./screenshot-codec.js" defer></script>
+  <script src="./snow-message.js" defer></script>
+  <script src="./encode.js" defer></script>
+</head>
+<body>
+  <main>
+    <form>
+      <textarea id="message" rows="3" aria-label="要编码的文字" required></textarea>
+      <div class="controls">
+        <a class="icon" id="download" download="雪花.png" aria-label="下载图片" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg>
+        </a>
+        <button class="icon" aria-label="生成图片">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2c0 6-2 8-8 8 6 0 8 2 8 8 0-6 2-8 8-8-6 0-8-2-8-8Zm9 13v7m-3.5-3.5h7"/></svg>
+        </button>
+      </div>
+    </form>
+    <p class="status" id="status" role="status" hidden></p>
+    <canvas id="snow" width="512" height="512" aria-label="生成的雪花图" hidden></canvas>
+  </main>
+</body>
+</html>
